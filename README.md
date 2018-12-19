@@ -1,1 +1,1 @@
-# Blockchain-foundation
+# Blockchain-essentials-projects
