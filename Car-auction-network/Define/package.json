@@ -1,0 +1,49 @@
+{
+  "$class": "org.acme.vehicle.auction.Auctioneer",
+  "email": "auction@acme.org",
+  "firstName": "Jenny",
+  "lastName": "Jones"
+}
+{
+  "$class": "org.acme.vehicle.auction.Member",
+  "balance": 5000,
+  "email": "memberA@acme.org",
+  "firstName": "Amy",
+  "lastName": "Williams"
+}
+{
+  "$class": "org.acme.vehicle.auction.Member",
+  "balance": 5000,
+  "email": "memberB@acme.org",
+  "firstName": "Billy",
+  "lastName": "Thompson"
+}
+{
+  "$class": "org.acme.vehicle.auction.Vehicle",
+  "vin": "vin:1234",
+  "owner": "resource:org.acme.vehicle.auction.Member#memberA@acme.org"
+}
+{
+  "$class": "org.acme.vehicle.auction.VehicleListing",
+  "listingId": "listingId:ABCD",
+  "reservePrice": 3500,
+  "description": "Arium Nova",
+  "state": "FOR_SALE",
+  "vehicle": "resource:org.acme.vehicle.auction.Vehicle#vin:1234"
+}
+{
+  "$class": "org.acme.vehicle.auction.Offer",
+  "bidPrice": 2000,
+  "listing": "resource:org.acme.vehicle.auction.VehicleListing#listingId:ABCD",
+  "member": "resource:org.acme.vehicle.auction.Member#memberA@acme.org"
+}
+{
+  "$class": "org.acme.vehicle.auction.Offer",
+  "bidPrice": 3500,
+  "listing": "resource:org.acme.vehicle.auction.VehicleListing#listingId:ABCD",
+  "member": "resource:org.acme.vehicle.auction.Member#memberB@acme.org"
+}
+{
+  "$class": "org.acme.vehicle.auction.CloseBidding",
+  "listing": "resource:org.acme.vehicle.auction.VehicleListing#listingId:ABCD"
+}
